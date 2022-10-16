@@ -84,11 +84,11 @@ function checkUsername(){
     let usertextarea = username.value
     console.log(usertextarea)
     if(usertextarea==="spromsat"){
-        location.replace("/spromsat.html")
+        location.replace("./spromsat.html")
     }
 
     else if(usertextarea==="pothimro"){
-        location.replace("/pothimro.html")
+        location.replace("./pothimro.html")
     }
 
     else{
