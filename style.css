@@ -1,0 +1,67 @@
+:root{
+    --primary-color: rgb(249 115 22);
+    --text-color : #fff;
+    --bg-900 : #171717 ;
+    --bg-800 : #27272a;
+    --bg-800-50 : rgb(48 48 48 / 0.5);
+    --bg-700 : #3f3f46;
+    --border-menu : solid 1px var(var(--bg-700));
+   
+}
+[data-theme="light"]{
+    --primary-color: rgb(249 115 22);
+    --text-color : #000;
+    --bg-900 : #F2F3F5 ;
+    --bg-800 : #fff;
+    --bg-800-50 : rgb(225 225 225 / 0.5);
+    --bg-700 : #F2F3F5;
+    --border-menu : none;
+   
+}
+
+*{
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.cer > div{
+    margin-top: 0.5rem;
+}
+
+.bg-neutral-900{
+    background-color: var(--bg-900) !important;
+    transition: .3s;
+}
+.text-white{
+    color: var(--text-color) !important;
+    transition: .25s;
+}
+
+.bg-neutral-800{
+    background-color: var(--bg-800) !important;
+    transition: .3s;
+}
+
+.text-white-i{
+    color: #fff !important;
+}
+
+.bg-neutral-800-50{
+    background-color: var(--bg-800-50);
+    transition: .3s;
+}
+
+.orange-h:hover{
+    color: var(--primary-color) !important;
+    transition: .3s;
+}
+
+.menu-border{
+    border: var(--border-menu);
+    transition: .3s;
+}
+
+.bg-neutral-700{
+    background-color: var(--bg-700) !important;
+    transition: .3s;
+}
+

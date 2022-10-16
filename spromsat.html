@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwijak Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ad806f8976.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+    
+</head>
+
+<body class="bg-neutral-900">
+ 
+    <div class="flex items-center px-4 py-4 flex-warp fixed top-0 w-full">
+        <nav class="flex justify-between w-full ">
+            <img onclick="toAboutPage()" class="hidden md:flex  h-10 w-10 object-cover object-top rounded-full" src="https://s3-ap-southeast-1.amazonaws.com/nextschool.com/students/249/20220906124605_399693.jpg">
+            <ul class="hidden md:flex flex rounded-full px-3 drop-shadow-md bg-neutral-800-50 menu-border shadow-orange-500/40 shadow backdrop-blur-sm">
+                <li><button onclick="toAboutPage()" class=" px-3 py-2 text-white block hover:text-orange-500 orange-h">โพรไฟล์</button></li>
+                <li><button onclick="toWorksPage()" class=" px-3 py-2 text-white block hover:text-orange-500 orange-h">ผลงาน</button></li>
+                <li><button onclick="toContactPage()" class=" px-3 py-2 text-white block hover:text-orange-500 orange-h">ติดต่อ</button></li>
+                <li><a class=" px-3 py-2 text-white block hover:text-orange-500 orange-h" href="/">กลับเว็บหลัก</a></li>
+            </ul>
+            <button onclick="switchMode()" class="h-fit flex items-center px-4 py-2 text-white-i block bg-gradient-to-r from-purple-500/90 via-rose-500/90 to-orange-500/90 rounded-full shadow-orange-500/40 shadow backdrop-blur">
+                <span id="toggle-icon">
+                    <i class="w-5 fa-solid fa-moon"></i>
+                </span>
+            </button>
+
+              <!-- mobie -->
+              <div class="flex flex-wrap justify-end w-fit md:hidden">
+                <button id="menu-btn" onclick="m_menu_toggle()" class="shadow-orange-500/40 shadow backdrop-blur-sm block md:hidden text-white bg-neutral-800-50 menu-border rounded-full text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">Menu <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                <!-- Dropdown menu -->
+                <div class="w-full flex justify-end mt-2 z-50">
+                    <div id="menu-list" style="display: none;" class="md:hidden z-10 w-44 bg-neutral-800-50 menu-border backdrop-blur-sm rounded divide-y divide-gray-100 shadow-orange-500/40 shadow">
+                        <ul class="py-1 text-sm text-white" aria-labelledby="dropdownDefault">
+                        <li>
+                            <button onclick="toAboutPage()" class="w-full text-start block py-2 px-4">โพรไฟล์</button>
+                        </li>
+                        <li>
+                            <button onclick="toWorksPage()" class="w-full text-start block py-2 px-4 ">ผลงาน</button>
+                        </li>
+                        <li>
+                            <button onclick="toContactPage()" class="w-full text-start block py-2 px-4 ">ติดต่อ</button>
+                        </li>
+                        <li>
+                            <a href="/" class="w-full text-start block py-2 px-4">กลับเว็บหลัก</a>
+                        </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+        </nav>
+    </div>
+
+    <div class="hero py-20 max-w-6xl mx-auto">
+        <div class="2 w-full flex px-10">
+            <div class="w-full flex flex-wrap">
+                <div class="lg:w-3/12 md:w-5/12 w-full mb-5 ">
+                    <div class="md:sticky md:top-16 bg-neutral-800 px-5 py-5 text-white rounded-lg shadow shadow-orange-500/40 shadow">                  
+                        <div class="flex items-center justify-center">
+                                <img class="h-14 w-14 object-cover object-top rounded-full" src="https://s3-ap-southeast-1.amazonaws.com/nextschool.com/students/249/20220906124605_399693.jpg">
+                            </span>
+                        </div>
+                        <div class="pt-2">
+                            <h1 class="text-xl text-center font-medium py-2">I'm <span class="text-orange-500">spromsat</span></h1>
+                            <div class="mx-auto w-fit">
+                               
+                                <h2 class="text-orange-500">Name : <span class="text-white">Suwijak Promsatid</span></h2>
+                                <h2 class="text-orange-500">Nickname : <span class="text-white">Pak</span></h2>
+                                <h2 class="text-orange-500">Age : <span class="text-white">17</span></h2>
+                                <h2 class="text-orange-500">Date of birth : <span class="text-white">7 July 2005</span></h2>
+                            </div>
+                            <div class="pt-4 flex justify-center w-full">
+                                <a class="px-1" href="https://discordapp.com/users/555407979508400137" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                                  </svg></a>
+                                <a class="px-1" href="https://www.facebook.com/suwijak.promsatid.31/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg></a>
+                                <a class="px-1" href="https://github.com/suwizx" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                  </svg></a>
+                                <a class="px-1" href="https://www.instagram.com/suwizx_/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                  </svg></a>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <a class="flex items-center decoration-solid hover:underline decoration-solid" href="mailto://suwijak.pak@gmail.com">suwijak.pak@gmail.com<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                    <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-9/12 md:w-7/12 w-full">
+
+                    <!-- sec1 -->
+
+                    <div id="sec1" style="display: block;" class="md:ml-5 bg-neutral-800 px-3 py-3 text-white rounded-lg shadow min-h-full shadow-orange-500/40 shadow">
+                        <h2 class="text-white-i px-1.5 text-sm font-bold py-1 rounded-lg bg-orange-500 text-white inline">การศึกษา</h2>
+                        <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-3.5 my-3">
+
+                            <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                <div class="w-fit pr-3">
+                                    <img class="h-14 w-14 object-cover object-top rounded-full" src="http://www.sesao15.go.th/web15/images/logo_spm15/Logo_OBEC_1000x1000.png">
+                                </div>
+                                <div class="flex flex-wrap w-10/12 items-center">
+                                    <div class="w-full"><h2 class="font-bold">โรงเรียนบ้านหนองโพธิ์ มิตรภาพที่129</h2></div>
+                                    <div class="w-full"><p class="text-white">อำเภอหลังสวน จังหวัดชุมพร</p></div>
+                                    <div class="w-full"><a class="flex items-center hover:underline" href="https://data.bopp-obec.info/web/index_view.php?School_ID=1086110232&page=info" target="_blank">รายละเอียดเพิ่มเติม<span class="px-1"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                      </svg></a></div>                                      
+                                </div>
+                            </div>
+                            <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                <div class="w-fit pr-3">
+                                    <img class="h-14 w-14 object-cover object-top rounded-full" src="https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/300960957_586489239643956_7849556493286556519_n.png?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHZsBfToa78YX7hBqb0Ss7g9tmhRuZqcLv22aFG5mpwu3OFsC5O89royfH5lLul1HMtJOS_Wa8NxA2AyYU9Y6M1&_nc_ohc=XZaStWbvfA0AX8Em7yd&_nc_ht=scontent.furt1-1.fna&oh=00_AT-oX70ZPE_wY4Noe1farJBqGkwlZs6xUZQerPMshPYe_Q&oe=6350D3E6">
+                                </div>
+                                <div class="flex flex-wrap w-10/12 items-center">
+                                    <div class="w-full"><h2 class="font-bold">โรงเรียนหลังสวนเทศบาลอุปถัมภ์</h2></div>
+                                    <div class="w-full"><p class="text-white">อำเภอหลังสวน จังหวัดชุมพร</p></div>
+                                    <div class="w-full"><a class="flex items-center hover:underline" href="https://www.facebook.com/LTOSchool/" target="_blank">รายละเอียดเพิ่มเติม<span class="px-1"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                      </svg></a></div>                                   
+                                </div>
+                            </div>
+                            <div class=" text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                <div class="w-fit pr-3">
+                                    <img class="h-14 w-14 object-cover object-top rounded-full " src="https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/308111269_450313237128334_5260888735707934170_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHZS6UWD030fTpMDuF1EuabvYukvg-XzWm9i6S-D5fNaQVKsr3v0omaSClAceezqngzZ5QZF6RaHk7VzdPzXFOa&_nc_ohc=0ObbFJdizAQAX_EL-1g&_nc_ht=scontent.furt1-1.fna&oh=00_AT9J7dpAdaGAsF27qxTT0SRXGIAmcUmKK4p8o0Ya7eU7SQ&oe=634FB9F6">
+                                </div>
+                                <div class="flex flex-wrap w-10/12  items-center">
+                                    <div class="w-full"><h2 class="font-bold">โรงเรียนสวนศรีวิทยา</h2></div>
+                                    <div class="w-full"><p class="text-white">อำเภอหลังสวน จังหวัดชุมพร</p></div>
+                                    <div class="w-full"><a class="flex items-center hover:underline" href="http://suansri.ac.th/mainpage" target="_blank">รายละเอียดเพิ่มเติม<span class="px-1"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                      </svg></a></div>                               
+                                </div>
+                            </div>
+                            <div class=" text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                <div class="w-fit pr-3">
+                                    <img class="h-14 w-14 object-cover object-top rounded-full" src="https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/240520136_106348641772967_3491453351315488752_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHN42TXevCjEQ8nfY8oR5HOmF-91G3TxjSYX73UbdPGNFZjWOX-oHswK5cjL_C6RyV_txDsP06H9y8eOkrcXwM7&_nc_ohc=dhRPKCiWxEEAX-i6Wqw&_nc_ht=scontent.furt1-1.fna&oh=00_AT_b_xd2FED32vG0k9y9XfwUadEkf4gUENEIQaygwaOMTA&oe=63509D22">
+                                </div>
+                                <div class="flex flex-wrap w-10/12 items-center">
+                                    <div class="w-full"><h2 class="font-bold">โรงเรียนศรียาภัย</h2></div>
+                                    <div class="w-full"><p class="text-white">อำเภอเมือง จังหวัดชุมพร</p></div>
+                                    <div class="w-full"><a class="flex items-center hover:underline" href="http://sriyapai.ac.th/" target="_blank">รายละเอียดเพิ่มเติม<span class="px-1"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                      </svg></a></div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-white-i px-1.5 text-sm font-bold py-1 rounded-lg bg-orange-500 text-white inline">ทักษะ</h2>
+                            <div class="my-3 grid lg:grid-cols-3 md:grid-cols-2 gap-3.5">
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-base font-medium orange-500"><i class="fa-brands fa-html5 pr-1"></i>HTML</span>
+                                        <span class="text-sm font-medium text-orange-500">80%</span>
+                                      </div>
+                                      <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                                        <div class="bg-orange-500 h-2.5 rounded-full" style="width: 80%"></div>
+                                      </div>
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-base font-medium orange-500"><i class="text-blue-500 fa-brands fa-css3-alt pr-1"></i>CSS</span>
+                                        <span class="text-sm font-medium text-orange-500">75%</span>
+                                      </div>
+                                      <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                                        <div class="bg-orange-500 h-2.5 rounded-full" style="width: 75%"></div>
+                                      </div>
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-base font-medium orange-500"><i class="text-yellow-500 fa-brands fa-js pr-1"></i>JS</span>
+                                        <span class="text-sm font-medium text-orange-500">65%</span>
+                                      </div>
+                                      <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                                        <div class="bg-orange-500 h-2.5 rounded-full" style="width: 65%"></div>
+                                      </div>
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-base font-medium orange-500"><i class="text-blue-400 fa-brands fa-wordpress pr-1"></i>WordPress</span>
+                                        <span class="text-sm font-medium text-orange-500">90%</span>
+                                      </div>
+                                      <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                                        <div class="bg-orange-500 h-2.5 rounded-full" style="width: 90%"></div>
+                                      </div>
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-base font-medium orange-500"><i class="text-purple-500 fa-brands fa-bootstrap pr-1"></i>Bootstrap</span>
+                                        <span class="text-sm font-medium text-orange-500">70%</span>
+                                      </div>
+                                      <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                                        <div class="bg-orange-500 h-2.5 rounded-full" style="width: 70%"></div>
+                                      </div>
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-base font-medium orange-500 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1000 1000" fill="none">
+                                            <path d="M489.5 226.499C328 231.632 280 346.999 269 409.499C283.333 386.332 328.5 335.5 395 335.5C472.5 335.5 531.5 422 567.5 449C611.237 481.803 699.123 525.115 814.5 490C906.5 462 949.167 364.332 958.5 317.999C914 378.499 846.5 414.838 763 371.999C705.5 342.499 662.5 221 489.5 226.499Z" fill="#07B6D5"/>
+                                            <path d="M261 500.999C99.5 506.132 51.5 621.499 40.5 683.999C54.8333 660.832 100 610 166.5 610C244 610 303 696.5 339 723.5C382.737 756.303 470.623 799.615 586 764.5C678 736.5 720.667 638.832 730 592.499C685.5 652.999 618 689.338 534.5 646.499C477 616.999 434 495.5 261 500.999Z" fill="#07B6D5"/>
+                                            </svg><span class="pr-1"></span></i>Tailwind</span>
+                                        <span class="text-sm font-medium text-orange-500">70%</span>
+                                      </div>
+                                      <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                                        <div class="bg-orange-500 h-2.5 rounded-full" style="width: 70%"></div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- sec2 -->
+
+                    <div id="sec2" style="display: none;" class="md:ml-5 bg-neutral-800 px-3 py-3 text-white rounded-lg shadow min-h-full shadow-orange-500/40 shadow">
+                        <h2 class="text-white-i px-1.5 text-sm font-bold py-1 rounded-lg bg-orange-500 text-white inline">ผลงาน</h2>
+                        <div class="grid lg:grid-cols-1 md:grid-cols-1 gap-3.5 my-3">
+
+                            <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                <div class="w-fit">
+                                    <img class="h-auto w-full object-cover object-top rounded-xl" src="web01.png">
+                                </div>
+                                <div class="flex flex-wrap w-auto items-center">
+                                    <div class="w-full"><h2 class="font-bold text-2xl pt-2">Portfolio Website Development</h2></div>
+                                    <div class="w-full"><p class="text-white">ผมสร้างเว็บไซต์สะสมผลงานของผมด้วย HTML CSS JS</p></div>
+                                    <div class="w-full py-2"><a class="inline-flex px-5 rounded-xl py-2 text-white-i mr-3 bg-orange-500 items-center hover:underline" href="https://suwizx.github.io/profile-page/" target="_blank">ดูเว็บไซต์<span class="px-1"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                      </svg></a><a class="hover:underline" href="https://github.com/suwizx/profile-page" target="_blank">ดู Source Code</a></div>                                      
+                                </div>
+                            </div>
+                            <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                <div class="w-fit">
+                                    <img class="h-auto w-full object-cover object-top rounded-xl" src="project01.jpg">
+                                </div>
+                                <div class="flex flex-wrap w-auto items-center">
+                                    <div class="w-full"><h2 class="font-bold text-2xl pt-2">โครงงานระบบแจ้งเตือนสำหรับสนับสนุนการดูแลผู้ป่วยติดเตียง</h2></div>
+                                    <div class="w-full"><p class="text-white">ผมเป็นส่วนหนึ่งในการพัฒนาระบบแจ้งเตือนสำหรับสนับสนุนการดูแลผู้ป่วยติดเตียงทำหน้าที่หลักในการโปรแกรมให้กับบอร์ด Kidbright โดยเชื่อมต่อกับเซ็นเซอร์ต่างๆ</p></div>
+                                    <div class="w-full py-2"><a class="inline-flex px-5 rounded-xl py-2 text-white-i mr-3 bg-orange-500 items-center hover:underline" href="">ดูรายละเอียดเพิ่มเติม<span class="px-1"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                      </svg></a>   
+                                    </div>                                 
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2 class="text-white-i px-1.5 text-sm font-bold py-1 rounded-lg bg-orange-500 text-white inline">กิจกรรม</h2>
+                            <div class="my-3 grid  lg:grid-cols-2 gap-3.5">
+                                <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="activity-1.jpg">
+                                    <h2 class="flex items-center justify-center mt-2 text-center w-full py-2 font-medium rounded-lg bg-orange-500 text-white-i">อบรมคอมพิวเตอร์กราฟฟิก</h2>
+                                </div>
+                                <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="activity-2.jpg">
+                                    <h2 class="flex items-center justify-center mt-2 text-center w-full py-2 font-medium rounded-lg bg-orange-500 text-white-i">แข่งโครงงานคอมพิวเตอร์</h2>
+                                </div>
+                                <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="activity-3.jpg">
+                                    <h2 class="flex items-center justify-center mt-2 text-center w-full py-2 font-medium rounded-lg bg-orange-500 text-white-i">เข้าค่าย YSLC รุ่นที่ 1</h2>
+                                </div>
+                                <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="activity-4.jpg">
+                                    <h2 class="flex items-center justify-center mt-2 text-center w-full py-2 font-medium rounded-lg bg-orange-500 text-white-i">ประกวดโครงการกล้าใหม่ใฝ่รู้</h2>
+                                </div>
+                                <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="activity-5.jpg">
+                                    <h2 class="flex items-center justify-center mt-2 text-center w-full py-2 font-medium rounded-lg bg-orange-500 text-white-i">เข้าค่าย IT Camp KMITL</h2>
+                                </div>  
+                                <div class="text-orange-500 rounded-lg px-3 py-3 flex flex-wrap border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="activity-6.jpg">
+                                    <h2 class="flex items-center justify-center mt-2 text-center w-full py-2 font-medium rounded-lg bg-orange-500 text-white-i px-3">แข่งโครงการสิ่งประดิษฐ์ด้วยบอร์ด KidBright</h2>
+                                </div>                               
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-white-i px-1.5 text-sm font-bold py-1 rounded-lg bg-orange-500 text-white inline">ประกาศนียบัตร</h2>
+                            <div class="columns-2 py-3 cer">
+                                <div style="margin-top: 0!important;" class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate01.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate02.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate03.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate04.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate05.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate06.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate07.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate08.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate09.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate10.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate11.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate12.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate13.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate14.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate15.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate16.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate17.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate18.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate19.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate20.png">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate21.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate22.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate23.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate24.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate25.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate26.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate27.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate28.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate29.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate30.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate31.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate32.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate33.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate34.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate35.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate36.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate37.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate38.jpg">
+                                </div>
+                                <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500">
+                                    <img class="rounded-lg object-cover" src="certificate39.jpg">
+                                </div>
+
+                             
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- sec3 -->
+
+                    <div id="sec3" style="display: none;" class="md:ml-5 bg-neutral-800 px-3 py-3 text-white rounded-lg shadow min-h-full shadow-orange-500/40 shadow">
+                        <h2 class="text-white-i px-1.5 text-sm font-bold py-1 rounded-lg bg-orange-500 text-white inline mb-3">ติดต่อ</h2>
+                        <div class="flex-wrap text-orange-500 rounded-lg px-3 py-3 border border-orange-500 mt-3 flex items-center justify-between">
+                            <div>
+                                <a href="mailto://suwijak.pak@gmal.com"><i class="pr-1 fa-solid fa-envelope"></i>suwijak.pak@gmail.com</a><span class="px-1"></span>
+                                <div>
+                                    <a href="tell://+66924596451"><i class="pr-1 fa-phone fa-solid"></i>+6692 4596451</a><span class="px-1"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-end items-center">
+                                <a class="pr-1" href="https://discordapp.com/users/555407979508400137" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                                  </svg></a>
+                                <a class="px-1" href="https://www.facebook.com/suwijak.promsatid.31/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg></a>
+                                <a class="px-1" href="https://github.com/suwizx" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                  </svg></a>
+                                <a class="px-1" href="https://www.instagram.com/suwizx_/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                  </svg></a>
+                            </div>
+                           
+                            
+                        </div>
+                        <div class=" text-orange-500 rounded-lg px-3 py-3 border border-orange-500 mt-3">
+                            <p class="text-white">33 หมู่ 18 ตำบลบ้านควน อำเภอหลังสวน จังหวัดชุมพร 86110</p>
+                        <iframe class="mt-2 w-full h-96 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.60352734326!2d99.05650065796317!3d9.832969998241472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fc06eefb9fbd220!2zOcKwNDknNTguNyJOIDk5wrAwMycyNy4zIkU!5e0!3m2!1sth!2sth!4v1665851678867!5m2!1sth!2sth" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

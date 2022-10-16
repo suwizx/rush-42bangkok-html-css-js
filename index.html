@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwijak Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ad806f8976.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-900">
+    <div class="flex items-center px-4 py-4 flex-warp fixed top-0 w-full">
+        <nav class="flex justify-between w-full items-center ">
+            <h1 class="text-orange-500 font-bold text-2xl">Double_P</h1>
+            <button onclick="switchMode()" class="h-fit flex items-center px-4 py-2 text-white-i block bg-gradient-to-r from-purple-500/90 via-rose-500/90 to-orange-500/90 rounded-full shadow-orange-500/40 shadow backdrop-blur">
+                <span id="toggle-icon">
+                    <i class="w-5 fa-solid fa-moon"></i>
+                </span>
+            </button>           
+        </nav>
+    </div>
+
+    <div class="px-5">
+        <div class="bg-neutral-800 px-4 py-4 my-20 mx-20 max-w-sm mx-auto rounded-xl">
+            <div class="relative rounded-xl overflow-auto py-8">
+                <div class="flex items-center justify-center pb-4">
+                  <span class="relative inline-flex">
+                    <img id="profile-img" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" type="button" class="w-24 h-24 inline-flex items-center object-cover object-top shadow rounded-full ">
+                    <span class="flex absolute h-4 w-4 bottom-0 right-0 -mt-1 -mr-1">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+                    </span>
+                  </span>
+                </div>
+                <label id="error-msg" style="display:none;" class="block mb-2 text-sm font-medium text-red-500" for="file_input">Error : user not found</label>
+                <label class="block mb-2 text-sm font-medium text-white" for="file_input">Username</label>
+                <div class="flex w-full pb-2">
+                    <input type="search" id="username" class="rounded-l-lg w-full block p-2.5 z-20 text-sm bg-neutral-700 placeholder-gray-400 text-white focus:ring focus:ring-orange-500/40" placeholder="Put your username" required>
+                    <button onclick="userPick()" class="focus:ring focus:ring-orange-500/40 bg-orange-500 text-white-i px-3 flex items-center rounded-r-lg">User <i class="pl-1 fa-solid fa-caret-down"></i></button>
+                    </button>
+                </div>
+                <div id="userSelect" class="w-full" style="display:none  ;">
+                    <div id="menu-list" class="z-10 w-full bg-neutral-700 menu-border rounded-lg mb-2">
+                        <ul class="py-1 text-sm text-white">
+                        <li>
+                            <button onclick="userSpromsatSelected()" class="w-full text-start block py-2 px-4 hover:underline">spromsat</button>
+                        </li>
+                        <li>
+                            <a onclick="userPothimroSelected()" class="w-full text-start block py-2 px-4 hover:underline">pothimro</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <label class="block mb-2 text-sm font-medium text-white" for="file_input">Password</label>
+                <div class="flex w-full pb-2">
+                    <input type="password" id="password" class="rounded-lg w-full block p-2.5 z-20 text-sm bg-neutral-700 placeholder-gray-400 text-white focus:ring focus:ring-orange-500/40" placeholder="•••••••••" >
+                </div>
+                <button onclick="checkUsername()" class="py-2 w-full bg-orange-500 rounded-lg text-white-i">Login</button>
+              </div>
+        </div>
+    </div>
+
+    
+
+    <!-- js -->
+
+    <script src="main.js"></script>
+
+</body>
+</html>
