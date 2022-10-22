@@ -8,10 +8,6 @@ let username = document.getElementById('username')
 
 document.documentElement.setAttribute('data-theme','dark')
 
-function changeProfile(img) {
-    document.getElementById("profile").img.src;
-}
-
 function m_menu_toggle(){
     let menu = document.getElementById("menu-list")
     if(menu.style.display === "none"){
