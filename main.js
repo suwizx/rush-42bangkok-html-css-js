@@ -73,22 +73,12 @@ function userSpromsatSelected(){
     userSelect.style.display = "none"
 }
 
-function userPothimroSelected(){    
-    document.getElementById('username').value = "pothimro"
-    document.getElementById("profile-img").src ="293472999_807773387123661_8440423069184366558_n.jpg";
-    userSelect.style.display = "none"
-}
-
 function checkUsername(){
     document.getElementById("error-msg").style.display = "none"
     let usertextarea = username.value
     console.log(usertextarea)
     if(usertextarea==="spromsat"){
         location.replace("./spromsat.html")
-    }
-
-    else if(usertextarea==="pothimro"){
-        location.replace("./pothimro.html")
     }
 
     else{
