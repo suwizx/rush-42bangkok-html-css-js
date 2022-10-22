@@ -69,7 +69,7 @@ function userPick(){
 
 function userSpromsatSelected(){    
     document.getElementById('username').value = "spromsat"
-    document.getElementById("profile-img").src ="spromsat-profile.jpg";
+    document.getElementById("profile-img").src ="./img/profile/spromsat-profile.jpg";
     userSelect.style.display = "none"
 }
 
